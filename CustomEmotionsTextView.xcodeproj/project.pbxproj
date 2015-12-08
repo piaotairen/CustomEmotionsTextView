@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4776FD021C168E2700A59A86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776FD011C168E2700A59A86 /* main.m */; };
+		4776FD051C168E2700A59A86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776FD041C168E2700A59A86 /* AppDelegate.m */; };
+		4776FD081C168E2700A59A86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776FD071C168E2700A59A86 /* ViewController.m */; };
+		4776FD0B1C168E2700A59A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4776FD091C168E2700A59A86 /* Main.storyboard */; };
+		4776FD0D1C168E2700A59A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4776FD0C1C168E2700A59A86 /* Assets.xcassets */; };
+		4776FD101C168E2700A59A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4776FD0E1C168E2700A59A86 /* LaunchScreen.storyboard */; };
+		4776FD1B1C168E2800A59A86 /* CustomEmotionsTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776FD1A1C168E2800A59A86 /* CustomEmotionsTextViewTests.m */; };
+		4776FD261C168E2800A59A86 /* CustomEmotionsTextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776FD251C168E2800A59A86 /* CustomEmotionsTextViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4776FD171C168E2800A59A86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4776FCF51C168E2700A59A86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4776FCFC1C168E2700A59A86;
+			remoteInfo = CustomEmotionsTextView;
+		};
+		4776FD221C168E2800A59A86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4776FCF51C168E2700A59A86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4776FCFC1C168E2700A59A86;
+			remoteInfo = CustomEmotionsTextView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4776FCFD1C168E2700A59A86 /* CustomEmotionsTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomEmotionsTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4776FD011C168E2700A59A86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4776FD031C168E2700A59A86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4776FD041C168E2700A59A86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4776FD061C168E2700A59A86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4776FD071C168E2700A59A86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4776FD0A1C168E2700A59A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4776FD0C1C168E2700A59A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4776FD0F1C168E2700A59A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4776FD111C168E2700A59A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4776FD161C168E2800A59A86 /* CustomEmotionsTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomEmotionsTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4776FD1A1C168E2800A59A86 /* CustomEmotionsTextViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomEmotionsTextViewTests.m; sourceTree = "<group>"; };
+		4776FD1C1C168E2800A59A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4776FD211C168E2800A59A86 /* CustomEmotionsTextViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomEmotionsTextViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4776FD251C168E2800A59A86 /* CustomEmotionsTextViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomEmotionsTextViewUITests.m; sourceTree = "<group>"; };
+		4776FD271C168E2800A59A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4776FCFA1C168E2700A59A86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4776FD131C168E2800A59A86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4776FD1E1C168E2800A59A86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4776FCF41C168E2700A59A86 = {
+			isa = PBXGroup;
+			children = (
+				4776FCFF1C168E2700A59A86 /* CustomEmotionsTextView */,
+				4776FD191C168E2800A59A86 /* CustomEmotionsTextViewTests */,
+				4776FD241C168E2800A59A86 /* CustomEmotionsTextViewUITests */,
+				4776FCFE1C168E2700A59A86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4776FCFE1C168E2700A59A86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4776FCFD1C168E2700A59A86 /* CustomEmotionsTextView.app */,
+				4776FD161C168E2800A59A86 /* CustomEmotionsTextViewTests.xctest */,
+				4776FD211C168E2800A59A86 /* CustomEmotionsTextViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4776FCFF1C168E2700A59A86 /* CustomEmotionsTextView */ = {
+			isa = PBXGroup;
+			children = (
+				4776FD031C168E2700A59A86 /* AppDelegate.h */,
+				4776FD041C168E2700A59A86 /* AppDelegate.m */,
+				4776FD061C168E2700A59A86 /* ViewController.h */,
+				4776FD071C168E2700A59A86 /* ViewController.m */,
+				4776FD091C168E2700A59A86 /* Main.storyboard */,
+				4776FD0C1C168E2700A59A86 /* Assets.xcassets */,
+				4776FD0E1C168E2700A59A86 /* LaunchScreen.storyboard */,
+				4776FD111C168E2700A59A86 /* Info.plist */,
+				4776FD001C168E2700A59A86 /* Supporting Files */,
+			);
+			path = CustomEmotionsTextView;
+			sourceTree = "<group>";
+		};
+		4776FD001C168E2700A59A86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4776FD011C168E2700A59A86 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4776FD191C168E2800A59A86 /* CustomEmotionsTextViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				4776FD1A1C168E2800A59A86 /* CustomEmotionsTextViewTests.m */,
+				4776FD1C1C168E2800A59A86 /* Info.plist */,
+			);
+			path = CustomEmotionsTextViewTests;
+			sourceTree = "<group>";
+		};
+		4776FD241C168E2800A59A86 /* CustomEmotionsTextViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4776FD251C168E2800A59A86 /* CustomEmotionsTextViewUITests.m */,
+				4776FD271C168E2800A59A86 /* Info.plist */,
+			);
+			path = CustomEmotionsTextViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4776FCFC1C168E2700A59A86 /* CustomEmotionsTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4776FD2A1C168E2800A59A86 /* Build configuration list for PBXNativeTarget "CustomEmotionsTextView" */;
+			buildPhases = (
+				4776FCF91C168E2700A59A86 /* Sources */,
+				4776FCFA1C168E2700A59A86 /* Frameworks */,
+				4776FCFB1C168E2700A59A86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomEmotionsTextView;
+			productName = CustomEmotionsTextView;
+			productReference = 4776FCFD1C168E2700A59A86 /* CustomEmotionsTextView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4776FD151C168E2800A59A86 /* CustomEmotionsTextViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4776FD2D1C168E2800A59A86 /* Build configuration list for PBXNativeTarget "CustomEmotionsTextViewTests" */;
+			buildPhases = (
+				4776FD121C168E2800A59A86 /* Sources */,
+				4776FD131C168E2800A59A86 /* Frameworks */,
+				4776FD141C168E2800A59A86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4776FD181C168E2800A59A86 /* PBXTargetDependency */,
+			);
+			name = CustomEmotionsTextViewTests;
+			productName = CustomEmotionsTextViewTests;
+			productReference = 4776FD161C168E2800A59A86 /* CustomEmotionsTextViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4776FD201C168E2800A59A86 /* CustomEmotionsTextViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4776FD301C168E2800A59A86 /* Build configuration list for PBXNativeTarget "CustomEmotionsTextViewUITests" */;
+			buildPhases = (
+				4776FD1D1C168E2800A59A86 /* Sources */,
+				4776FD1E1C168E2800A59A86 /* Frameworks */,
+				4776FD1F1C168E2800A59A86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4776FD231C168E2800A59A86 /* PBXTargetDependency */,
+			);
+			name = CustomEmotionsTextViewUITests;
+			productName = CustomEmotionsTextViewUITests;
+			productReference = 4776FD211C168E2800A59A86 /* CustomEmotionsTextViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4776FCF51C168E2700A59A86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Cobb;
+				TargetAttributes = {
+					4776FCFC1C168E2700A59A86 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					4776FD151C168E2800A59A86 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 4776FCFC1C168E2700A59A86;
+					};
+					4776FD201C168E2800A59A86 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 4776FCFC1C168E2700A59A86;
+					};
+				};
+			};
+			buildConfigurationList = 4776FCF81C168E2700A59A86 /* Build configuration list for PBXProject "CustomEmotionsTextView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4776FCF41C168E2700A59A86;
+			productRefGroup = 4776FCFE1C168E2700A59A86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4776FCFC1C168E2700A59A86 /* CustomEmotionsTextView */,
+				4776FD151C168E2800A59A86 /* CustomEmotionsTextViewTests */,
+				4776FD201C168E2800A59A86 /* CustomEmotionsTextViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4776FCFB1C168E2700A59A86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4776FD101C168E2700A59A86 /* LaunchScreen.storyboard in Resources */,
+				4776FD0D1C168E2700A59A86 /* Assets.xcassets in Resources */,
+				4776FD0B1C168E2700A59A86 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4776FD141C168E2800A59A86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4776FD1F1C168E2800A59A86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4776FCF91C168E2700A59A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4776FD081C168E2700A59A86 /* ViewController.m in Sources */,
+				4776FD051C168E2700A59A86 /* AppDelegate.m in Sources */,
+				4776FD021C168E2700A59A86 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4776FD121C168E2800A59A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4776FD1B1C168E2800A59A86 /* CustomEmotionsTextViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4776FD1D1C168E2800A59A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4776FD261C168E2800A59A86 /* CustomEmotionsTextViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4776FD181C168E2800A59A86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4776FCFC1C168E2700A59A86 /* CustomEmotionsTextView */;
+			targetProxy = 4776FD171C168E2800A59A86 /* PBXContainerItemProxy */;
+		};
+		4776FD231C168E2800A59A86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4776FCFC1C168E2700A59A86 /* CustomEmotionsTextView */;
+			targetProxy = 4776FD221C168E2800A59A86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4776FD091C168E2700A59A86 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4776FD0A1C168E2700A59A86 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4776FD0E1C168E2700A59A86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4776FD0F1C168E2700A59A86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4776FD281C168E2800A59A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4776FD291C168E2800A59A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4776FD2B1C168E2800A59A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CustomEmotionsTextView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaLiang.CustomEmotionsTextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4776FD2C1C168E2800A59A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CustomEmotionsTextView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaLiang.CustomEmotionsTextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4776FD2E1C168E2800A59A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CustomEmotionsTextViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaLiang.CustomEmotionsTextViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomEmotionsTextView.app/CustomEmotionsTextView";
+			};
+			name = Debug;
+		};
+		4776FD2F1C168E2800A59A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CustomEmotionsTextViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaLiang.CustomEmotionsTextViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomEmotionsTextView.app/CustomEmotionsTextView";
+			};
+			name = Release;
+		};
+		4776FD311C168E2800A59A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CustomEmotionsTextViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaLiang.CustomEmotionsTextViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CustomEmotionsTextView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4776FD321C168E2800A59A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CustomEmotionsTextViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaLiang.CustomEmotionsTextViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CustomEmotionsTextView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4776FCF81C168E2700A59A86 /* Build configuration list for PBXProject "CustomEmotionsTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4776FD281C168E2800A59A86 /* Debug */,
+				4776FD291C168E2800A59A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4776FD2A1C168E2800A59A86 /* Build configuration list for PBXNativeTarget "CustomEmotionsTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4776FD2B1C168E2800A59A86 /* Debug */,
+				4776FD2C1C168E2800A59A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4776FD2D1C168E2800A59A86 /* Build configuration list for PBXNativeTarget "CustomEmotionsTextViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4776FD2E1C168E2800A59A86 /* Debug */,
+				4776FD2F1C168E2800A59A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4776FD301C168E2800A59A86 /* Build configuration list for PBXNativeTarget "CustomEmotionsTextViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4776FD311C168E2800A59A86 /* Debug */,
+				4776FD321C168E2800A59A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4776FCF51C168E2700A59A86 /* Project object */;
+}
