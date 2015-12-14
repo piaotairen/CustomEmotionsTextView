@@ -1,0 +1,804 @@
+//
+//  CmdCollect.pch
+//  3DESAndBase64Demo
+//
+//  Created by Cobb on 15/4/21.
+//  Copyright (c) 2015年 Hu Zhiyuan. All rights reserved.
+//
+
+#ifndef _DESAndBase64Demo_CmdCollect_pch
+#define _DESAndBase64Demo_CmdCollect_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+#endif
+
+//只在Debug模式下执行NSLog
+#ifdef DEBUG
+
+#define NSLog(format, ...) do {fprintf(stderr, "<%s : %d> %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__, __func__);(NSLog)((format), ##__VA_ARGS__);fprintf(stderr, "\n");} while (0)
+
+#else
+
+#define NSLog(format, ...) do {} while (0)
+
+#endif
+
+
+//----------------------------------------------------------------------------
+//登录、注册
+//----------------------------------------------------------------------------
+#define CMD_LOGIN @"CMD_LOGIN"					//登录
+
+#define CMD_LOGOUT @"CMD_LOGOUT"	 				//注销登录
+
+#define CMD_REGISTE @"CMD_REGISTE"					//手机注册
+
+#define CMD_REGISTE_OTHERS	@"CMD_REGISTE_OTHERS"		//第三方登录完善注册信息
+
+#define CMD_GET_VERIFY_CODE @"CMD_GET_VERIFY_CODE"			//获取手机验证码
+
+#define CMD_FORGET_PASSWORD @"CMD_FORGET_PASSWORD"			//忘记密码后修改密码
+
+#define CMD_CHANGE_PASSWORD @"CMD_CHANGE_PASSWORD" 		//通过验证旧密码修改密码
+
+
+
+//----------------------------------------------------------------------------
+//广场和话题
+//----------------------------------------------------------------------------
+#define CMD_GET_HOT_TOPIC_LIST @"CMD_GET_HOT_TOPIC_LIST"		//获取热点话题列表
+
+#define CMD_GET_RECOMMEND_TOPIC_LIST @"CMD_GET_RECOMMEND_TOPIC_LIST"	//获取推荐的话题列表
+
+#define CMD_GET_HOT_FEED_LIST @"CMD_GET_HOT_FEED_LIST"		//拉取热点Feeds
+
+#define CMD_GET_NEW_FEED_LIST @"CMD_GET_NEW_FEED_LIST"		//拉取最新Feeds
+
+#define CMD_DEL_FEED @"CMD_DEL_FEED"				//删除Feed
+
+#define CMD_ADD_FEED_PRAISE	@"CMD_ADD_FEED_PRAISE"		//feed点赞
+
+#define CMD_DEL_FEED_PRAISE	@"CMD_DEL_FEED_PRAISE"		//取消feed赞
+
+#define CMD_ADD_COMMENT @"CMD_ADD_COMMENT"				//对Feed发评论
+
+#define	CMD_DEL_COMMENT	@"CMD_DEL_COMMENT"			//删除评论
+
+#define CMD_GET_COMMENT_BY_FEED_ID @"CMD_GET_COMMENT_BY_FEED_ID"	//获取某个Feed的所有评论
+
+#define CMD_REPORT_FEED	@"CMD_REPORT_FEED"			//举报Feed
+
+#define CMD_REPORT_TOPIC @"CMD_REPORT_TOPIC"			//举报话题
+
+#define	CMD_GET_FOLLOW_FEED_LIST @"CMD_GET_FOLLOW_FEED_LIST"	//获取关注的Feeds列表
+
+#define	CMD_GET_NEARBY_FEED_LIST @"CMD_GET_NEARBY_FEED_LIST"	//获取附近的Feeds的列表
+
+#define	CMD_GET_FEED_SHARE_LINK	@"CMD_GET_FEED_SHARE_LINK"	//获取Feed的分享链接
+
+#define	CMD_GET_TOPIC_BY_IDS @"CMD_GET_TOPIC_BY_IDS"		//通过话题id获取话题数据
+
+#define CMD_GET_FEED_BY_TOPIC_ID @"CMD_GET_FEED_BY_TOPIC_ID"	//通过话题的id获取话题的Feeds
+
+#define CMD_GET_RECOMMEND_USER_LIST @"CMD_GET_RECOMMEND_USER_LIST" //获取推荐的用户列表
+
+#define CMD_ADD_FOLLOW_USER_BATCH @"CMD_ADD_FOLLOW_USER_BATCH" //尝鲜-关注 获取一批推荐的用户（V2.4）
+
+#define CMD_GET_HOT_USER_LIST @"CMD_GET_HOT_USER_LIST"     //各种榜单
+
+#define CMD_GET_HOT_TOPIC_OWNER_LIST @"CMD_GET_HOT_TOPIC_OWNER_LIST" //词主榜单
+
+#define CMD_QUERY_USER_FOLLOW_BATCH @"CMD_QUERY_USER_FOLLOW_BATCH" //批量查询用户的是否关注，v2.4新增
+
+//----------------------------------------------------------------------------
+//写操作
+//----------------------------------------------------------------------------
+#define	CMD_GET_PIC_TOKEN @"CMD_GET_PIC_TOKEN"			//上传图片获取token
+
+#define CMD_POST_FEED @"CMD_POST_FEED"				//发Feed
+
+#define CMD_SEARCH_TOPIC_NAME @"CMD_SEARCH_TOPIC_NAME"      //搜索话题名
+
+
+
+//----------------------------------------------------------------------------
+// 每日一蘸
+//----------------------------------------------------------------------------
+#define	CMD_GET_DAILY_STAR_URL @"CMD_GET_DAILY_STAR_URL"			//获取每日一赞的url
+
+
+
+//----------------------------------------------------------------------------
+// 消息系统
+//----------------------------------------------------------------------------
+#define CMD_CHECK_NEW_MSG @"CMD_CHECK_NEW_MSG" //检查是否存在新消息，用于小红点提示
+
+#define CMD_GET_NEW_MSG @"CMD_GET_NEW_MSG" //获取新消息列表
+
+
+//----------------------------------------------------------------------------
+// 酱厂
+//----------------------------------------------------------------------------
+#define CMD_GET_TOPIC_BY_CATEGORY @"CMD_GET_TOPIC_BY_CATEGORY"  //根据类别拉取词条列表
+
+#define CMD_GET_TOPIC_CATEGORY @"CMD_GET_TOPIC_CATEGORY" //拉取酱厂类别信息
+
+#define CMD_GET_CATEGORY_WITH_TOPICS @"CMD_GET_CATEGORY_WITH_TOPICS" //拉取酱厂类别信息及前三个词条V1.8使用
+
+#define CMD_GET_RECOMMEND_TOPIC @"CMD_GET_RECOMMEND_TOPIC" //拉取推荐词条信息  V1.8开始过期
+
+#define CMD_GET_OFFICIAL_BANNER   @"CMD_GET_OFFICIAL_BANNER"     //拉取酱厂顶部banner位信息，替代CMD_GET_RECOMMEND_TOPIC
+
+
+
+
+
+//----------------------------------------------------------------------------
+//精选
+//----------------------------------------------------------------------------
+#define	CMD_GET_SELECTED_USER_LIST @"CMD_GET_SELECTED_USER_LIST"	//获取精选用户列表
+
+#define CMD_GET_AGGREGATE_LIST @"CMD_GET_AGGREGATE_LIST"		//获取专题列表
+
+#define	CMD_GET_SELECTED_TOPIC_LIST @"CMD_GET_SELECTED_TOPIC_LIST"	//获取某个专题下话题的列表
+
+#define CMD_SEARCH_USER	@"CMD_SEARCH_USER"			//搜索用户
+
+#define	CMD_SEARCH_TOPIC @"CMD_SEARCH_TOPIC"			//搜索话题
+
+#define	CMD_SEARCH_FEED	@"CMD_SEARCH_FEED"			//搜索内容
+
+#define	CMD_GET_FEED_BY_ID @"CMD_GET_FEED_BY_ID"			//通过Feedid获取Feed信息
+
+#define CMD_GET_FEED_BY_FEED_IDS @"CMD_GET_FEED_BY_FEED_IDS" //通过feedid集合批量获取feeds
+
+
+//----------------------------------------------------------------------------
+//活动
+//----------------------------------------------------------------------------
+#define	CMD_GET_ACTIVITY_LIST @"CMD_GET_ACTIVITY_LIST"				//获取活动列表
+
+#define CMD_GET_HOT_FEED_BY_ACTIVITY_ID	@"CMD_GET_HOT_FEED_BY_ACTIVITY_ID"	//获取某个活动的Feeds排行榜（热门）
+
+#define CMD_GET_NEW_FEED_BY_ACTIVITY_ID @"CMD_GET_NEW_FEED_BY_ACTIVITY_ID"		//获取某个活动的Feeds的最新列表
+
+#define CMD_GET_NEARBY_FEED_BY_ACTIVITY_ID @"CMD_GET_NEARBY_FEED_BY_ACTIVITY_ID"	//获取某个话题的Feeds的附近列表
+
+#define CMD_GET_FEED_RANK_BY_ACTIVITY_ID @"CMD_GET_FEED_RANK_BY_ACTIVITY_ID"	//活动结束后获取活动的排行数据。
+
+#define CMD_GET_ACTIVITY_INFO @"CMD_GET_ACTIVITY_INFO" //根据绑定的话题id加载活动信息
+
+
+
+//----------------------------------------------------------------------------
+//个人
+//----------------------------------------------------------------------------
+#define CMD_GET_USER_INFO @"CMD_GET_USER_INFO"			//获取个人信息 (可用于获取他人信息)
+
+#define CMD_SET_USER_INFO @"CMD_SET_USER_INFO"			//填写修改个人信息（只可修改自己）
+
+#define CMD_GET_USER_FOLLOW_LIST @"CMD_GET_USER_FOLLOW_LIST"		   //获取指定用户关注的用户列表
+
+#define CMD_GET_USER_FAN_LIST @"CMD_GET_USER_FAN_LIST"			//获取用户粉丝列表
+
+#define CMD_GET_FEED_USER_FOLLOW @"CMD_GET_FEED_USER_FOLLOW"		//获取用户参与的Feeds列表
+
+#define CMD_GET_TOPIC_USER_FOLLOW @"CMD_GET_TOPIC_USER_FOLLOW"		//获取用户关注的话题的列表
+
+#define CMD_GET_TOPIC_USER_CREATED @"CMD_GET_TOPIC_USER_CREATED"    //获取用户创建的词条
+
+#define CMD_ADD_FOLLOW_TOPIC @"CMD_ADD_FOLLOW_TOPIC"		//关注话题
+
+#define CMD_DEL_FOLLOW_TOPIC @"CMD_DEL_FOLLOW_TOPIC"		//取消关注话题
+
+#define CMD_ADD_FOLLOW_USER	@"CMD_ADD_FOLLOW_USER"		//关注用户
+
+#define CMD_DEL_FOLLOW_USER	@"CMD_DEL_FOLLOW_USER"		//取消关注用户
+
+#define CMD_SET_USER_ICON_PIC @"CMD_SET_USER_ICON_PIC"		//设置个人头像 被CMD_SET_USER_INFO取代了
+
+#define CMD_SET_USER_BG_PIC	@"CMD_SET_USER_BG_PIC"		//设置个人背景图 被CMD_SET_USER_INFO取代了
+
+#define CMD_DAILY_SIGN @"CMD_DAILY_SIGN"  // 签到
+
+#define CMD_GET_SCHOOL @"CMD_GET_SCHOOL"  //获取学校信息
+
+
+
+//----------------------------------------------------------------------------
+//设置
+//----------------------------------------------------------------------------
+#define CMD_CHECK_VERSION @"CMD_CHECK_VERSION"			//检查版本
+
+#define CMD_FEEDBACK @"CMD_FEEDBACK"				//反馈
+
+#define CMD_HANDSHAKE @"CMD_HANDSHAKE"				//从后台获取对称密钥
+
+#define CMD_SHARE_TEMPLATE @"CMD_SHARE_TEMPLATE"          //获取分享文案列表
+
+
+
+//----------------------------------------------------------------------------
+//问答相关协议
+//----------------------------------------------------------------------------
+#define CMD_GET_ANSWER_FEEDS_LIST_BY_QID @"CMD_GET_ANSWER_FEEDS_LIST_BY_QID" //问题详情中拉取答案feeds
+
+#define CMD_GET_ALL_QA_FEEDS_LIST         @"CMD_GET_ALL_QA_FEEDS_LIST"//主页拉取问答的feeds
+
+#define CMD_GET_QA_FEEDS_LIST_BY_TOPIC_ID  @"CMD_GET_QA_FEEDS_LIST_BY_TOPIC_ID"//通过词条id获取其问答feeds
+
+#define CMD_GET_HOT_FEED_LIST_BY_TOPIC_ID @"CMD_GET_HOT_FEED_LIST_BY_TOPIC_ID" //拉取词条的脑洞feeds
+
+#define CMD_GET_NEWS_QFEEDS_LIST @"CMD_GET_NEWS_QFEEDS_LIST" //尝鲜拉取新问的feeds
+
+
+//----------------------------------------------------------------------------
+//搜索相关协议
+//----------------------------------------------------------------------------
+#define CMD_SEARCH  @"CMD_SEARCH"   //搜索协议
+
+#define CMD_GET_HOT_SEARCH @"CMD_GET_HOT_SEARCH" //热搜榜
+
+//----------------------------------------------------------------------------
+//创建新词条的相关协议
+//----------------------------------------------------------------------------
+#define CMD_APPLY_NEW_TOPIC @"CMD_APPLY_NEW_TOPIC" //申请新词条的请求
+
+#define CMD_ADD_INFO_FOR_APPLY @"CMD_ADD_INFO_FOR_APPLY" //提交申请后添加信息，目前只是添加答案
+
+#define CMD_CHECK_AUTHOR @"CMD_CHECK_AUTHOR" //检查是否有权限
+
+#define CMD_OWNER_OPTION_FEED	@"CMD_OWNER_OPTION_FEED"  //词主对词条内feed处理
+
+#define CMD_GET_CONFIG   @"CMD_GET_CONFIG"  //拉取公共配置信息
+
+//----------------------------------------------------------------------------
+//请求参数
+//----------------------------------------------------------------------------
+#define kPageSize 15 //请求每页大小
+
+
+//----------------------------------------------------------------------------
+//钥匙串keychain存储kChain_Key_name_server
+//----------------------------------------------------------------------------
+#define k_UUID_nameServer @"k_UUID_nameServer" //keychain-用户UUID-(存取服务器用户名)
+
+
+
+//----------------------------------------------------------------------------
+//NSUserDefaults本地数据存储
+//----------------------------------------------------------------------------
+#define KUser_uiUserId @"KUser_uiUserId"//用户信息-用户id（NSInteger）
+
+#define KUser_uiUserType @"KUser_uiUserType"//用户信息-用户类型(NSInteger)
+
+#define kUser_excahngeSkey @"kUser_excahngeSkey" //加解密信息-对称密钥skey(NSString)
+
+#define KUser_LoginType @"KUser_LoginType"//用户信息-用户登录态（BOOL: YES为登录、NO为非登陆）
+
+#define kUser_QQsOpenId @"kUser_QQsOpenId" //用户信息-登录参数-QQ登陆时的sOpenId(NSString)
+
+#define kUser_WXsOpenId @"kUser_WXsOpenId" //用户信息-登录参数-微信登陆时的sOpenId(NSString)
+
+#define kUser_SinasOpenId @"kUser_SinasOpenId" //用户信息-登录参数-sina登陆时的sOpenId(NSString)
+
+#define kUser_sPhoneNum @"kUser_sPhoneNum" //用户信息-登录参数-手机用户登陆时的手机号(NSString)
+
+#define kUser_sPassword @"kUser_sPassword" //用户信息-登录参数-sPassword(NSString)
+
+#define kUser_AnswerText(topicName) [NSString stringWithFormat:@"%@%@",@"kUser_AnswerText",topicName] //主页--尝鲜--酱答--回答问题--用户编辑内容(NSString)
+
+#define kUser_bHasNew @"kUser_bHasNew" //主页--导航栏左边item--是否有新消息标记(BOOL:YES为有新消息、NO为无新消息)
+
+#define kUser_isSignOrNot @"kUser_isSignOrNot" //用户信息-是否签到(BOOL: YES为已签到、NO为未签到)
+
+#define kUser_DailyUrl @"kUser_DailyUrl" //每日一蘸--保存网页的url
+
+#define k_iProvinceId @"k_iProvinceId" //学校信息-省份
+
+#define K_iCityId @"K_iCityId" //学校信息- 城市
+
+#define K_iAreaId @"K_iAreaId" //学校信息- 地区
+
+#define K_sSchoolName_row @"K_sSchoolName_row" //学校信息
+
+#define kApplicationOpenCount @"kApplicationOpenCount"  //记录应用程序打开的次数
+
+#define kApplicationOpenTime @"kApplicationOpenTime"  //记录应用程序第一次打开的时间
+
+#define kloginViewController @"kloginViewController"  //记录应用程序登陆时所在的子类
+
+#define kHasCommentfiveStar @"kHasCommentfiveStar"  //记录用户是否已经评论过application
+
+#define kUserFirstPraise @"kUserFirstPraise"  //记录用户是否是第一次点赞
+
+#define kUserPraiseHasSet @"kUserPraiseHasSet"  //记录用户是否设置过第一次点赞
+
+#define kUserThreedaySet @"kUserThreedaySet"  //记录用户是否点击过三天后评论的引导弹窗
+
+#define kPushUserInfoMsg @"kPushUserInfoMsg"  //记录推送过来的消息
+
+#define kGuided_layer_view @"kGuided_layer_view"  //首页- 蒙层引导
+
+#define kGuided_Topic_view @"kGuided_Topic_view"  //词条- 蒙层引导
+
+#define kTopicViewOpenCount @"kTopicViewOpenCount"  //记录词条界面打开的次数
+
+#define kTopicViewOpenFirst @"kTopicViewOpenFirst"  //记录词条界面第一次点击 这是什么
+
+#define K_iMaxPhotoNum    @"K_iMaxPhotoNum"         //记录添加图片最大数
+
+#define K_UserFirstTapFollow    @"K_UserFirstTapFollow"         //标记用户是否第一次点击尝鲜关注
+
+
+//----------------------------------------------------------------------------
+//NSNotificationCenter通知中心
+//----------------------------------------------------------------------------
+#define kNotification_Http_getsKey @"kNotification_Http_getsKey" //拿到对称密钥的通知
+
+#define kNotification_Sina_login @"kNotification_Sina_login" //第三方登陆-新浪微博登陆
+
+#define kNotification_User_logout @"kNotification_User_logout" //用户设置--退出登陆
+
+#define kNotification_PhoneUser_login @"kNotification_PhoneUser_login" //登陆页面--手机用户登陆
+
+#define kNotification_newMessage_change @"kNotification_newMessage_change" //主页面--新消息的小红点变更的通知
+
+#define kNotification_get_newMessage @"kNotification_get_newMessage"       //消息界面获得消息
+
+#define kNotification_User_ChangeInfo @"kNotification_User_ChangeInfo"       //用户修改了个人信息的消息
+
+#define kNotification_User_SendFeed @"kNotification_User_SendFeed"       //用户进行的写操作
+
+#define kNotification_area_changeInfo @"kNotification_area_changeInfo"       //地区发生改变
+
+#define kNotification_User_Follow @"kNotification_User_Follow"  //发送用户关注的通知
+
+#define kNotification_User_Report @"kNotification_User_Report"  //发送用户举报feed的通知
+
+#define kNotification_reloadFeedPraise @"kNotification_reloadFeedPraise"  //发送feed的通知 点赞在其他页面更新了 刷新界面
+
+#define KNotification_filmView_reloadFeedPraise @"KNotification_filmView_reloadFeedPraise" //从图片上点击赞
+
+#define KNotification_Userlist_refresh @"KNotification_Userlist_refresh" //用户粉丝和关注列表需要更新的通知
+
+#define KNotification_handleLaunching  @"KNotification_handleLaunching"  //程序被杀伤，回到主界面
+
+#define kFeed_UserQuestionUpdate @"kFeed_UserQuestionUpdate"  //用户的问题页面
+
+#define kFeed_UserAnswerUpdate @"kFeed_UserAnswerUpdate"  //用户的回答页面
+
+#define kFeed_UserBrainHoleUpdate @"kFeed_UserBrainHoleUpdate"  //用户的脑洞页面
+
+#define kFeed_UserQuestion_del @"kFeed_UserQuestion_del"    //用户的问题页面删除feed
+
+#define kFeed_UserAnswer_del @"kFeed_UserAnswer_del"        //用户的答案页面删除feed
+
+#define kFeed_UserBrainHole_del @"kFeed_UserBrainHole_del"  //用户的详细页面删除feed
+
+
+//----------------------------------------------------------------------------
+//本地配置（初始对称密钥）
+//----------------------------------------------------------------------------
+#define kDefaultEncryptKey @"xZagVGCHwc&f3YF@N0*dmW*c"//本地的初始对称密钥
+
+#define kLeftJiangzhiKeyWord @"「" //酱知中词条左侧的关键词
+
+#define kRightJiangzhiKeyWord @"」" //酱知中词条左侧的关键词
+
+#define kReplacePictureStr @"@@jz-img@@"  //酱知feed长文中的图片占位符
+
+#define kLeftReplacePicStr  @"「#_JZTAG_"      //酱知左侧feed长文中的图片占位符
+#define kRightReplacePicStr @"_JZTAG_#」"      //酱知右侧feed长文中的图片占位符
+
+#define kUniqueIdentifierSep @"-"      //酱知Spotlight搜索的uniqueIdentifier分隔符
+
+
+//----------------------------------------------------------------------------
+//系统相关设置
+//----------------------------------------------------------------------------
+#define MLString(str) NSLocalizedString(str, @"")   //多国语言
+
+#define IOSDEVICE [[[UIDevice currentDevice]systemVersion]floatValue] //系统版本
+
+#define IOS7 IOSDEVICE >= 7.0 //系统版本大于等于7.0
+
+#define IOS8 IOSDEVICE >= 8.0 //系统版本大于等于8.0
+
+#define IOS9 IOSDEVICE >= 9.0 //系统版本大于等于9.0
+
+#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO) // 是否高清屏
+
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) // 是否iPad
+
+#define isSimulator (NSNotFound != [[[UIDevice currentDevice] model] rangeOfString:@"Simulator"].location) // 是否模拟器
+
+#define kSupport1XImage (([UIScreen mainScreen].scale) == 1)?YES:NO //屏幕是否支持@1x图片的分辨率
+
+#define kSupport2XImage (([UIScreen mainScreen].scale) == 2)?YES:NO //屏幕是否支持@2x图片的分辨率
+
+#define kSupport3XImage (([UIScreen mainScreen].scale) == 3)?YES:NO //屏幕是否支持@3x图片的分辨率
+
+#define kScreenScale ([UIScreen mainScreen].scale) //屏幕一个屏幕点等于多少像素点（CGFloat）
+
+
+
+
+//----------------------------------------------------------------------------
+//屏幕尺寸
+//----------------------------------------------------------------------------
+//#define kScreenWidth ([[UIScreen mainScreen]bounds].size.width)//屏幕宽度
+//
+//#define kScreenHeight ([[UIScreen mainScreen]bounds].size.height)//屏幕高度
+
+#define kScreenWidth ([[UIScreen mainScreen]bounds].size.width < [[UIScreen mainScreen]bounds].size.height?[[UIScreen mainScreen]bounds].size.width:[[UIScreen mainScreen]bounds].size.height)//屏幕宽度
+
+#define kScreenHeight ([[UIScreen mainScreen]bounds].size.height > [[UIScreen mainScreen]bounds].size.width?[[UIScreen mainScreen]bounds].size.height:[[UIScreen mainScreen]bounds].size.width)//屏幕高度
+
+#define kStatusBarHeight ([[UIApplication sharedApplication]statusBarFrame].size.height)//状态栏高度
+
+#define kNavgationBarHeight (64.0f) //NavgationBar的高度
+
+#define kTabBarHeight (49.0f) //下方tabBar的高度
+
+#define kToolBarHeight (44.0f) //下方toolBar的高度
+
+#define kJiangTopScrollHeight (100.0f)    //酱厂页面顶部scrollview的高度
+
+#define kFooterBarHeight (50.0f)      //词主榜下方footerView的高度
+
+#define kOtherHeightForHeader 22.0f  //酱厂页面分类的高度
+
+#define kTableViewCellLineHeight (1.0f/([UIScreen mainScreen].scale)) //仿tableview的cell的细线高度
+
+#define kIphone4S ((kScreenHeight <= 480)?YES:NO)  //iPhone4s 以下
+
+#define kIphone5S ((kScreenHeight <= 568)?YES:NO)  //iPhone5s 以下
+
+#define kScreenPx(px) (roundf((px)*0.33333))  //用户将px的像素长度转换为屏幕点（四舍五入）
+
+#define kCeilScreenPx(px) (ceil((px)*0.33333)) //将px的像素长度转换为屏幕点（向前进一位）
+
+//----------------------------------------------------------------------------
+//主页TabScrollView的设置
+//----------------------------------------------------------------------------
+#define kDefaultTabbarHeight (34.0f)//上方滚动的tabBar高度
+
+#define kDefaultTabbarBottomSpacing (0.0f)
+
+#define kDefaultCacheCount (4.0f)
+
+#define kInputTextViewMaxHeight (150.0f) //全局的文本输入框的最大高度
+
+#define kTableRefreshTimeInterval (1.0f) //表格刷新的时间停滞
+
+#define kWebViewLoadingDelay (0.5f) //每日一蘸网页延时消失loading
+
+//----------------------------------------------------------------------------
+//颜色的设置
+//----------------------------------------------------------------------------
+#define kFeedCellTopicColor [UIColor colorWithRed:57.0f/255.0f green:88.0f/255.0f blue:154.0f/255.0f alpha:1]//feedcell话题颜色
+
+#define kFeedCellTextColor [UIColor colorWithRed:21.0f/255.0f green:21.0f/255.0f blue:21.0f/255.0f alpha:1]//feedcell文本颜色
+
+#define kNavigationBarColor [UIColor colorWithRed:20.0f/255.0f green:20.0f/255.0f blue:20.0f/255.0f alpha:1]//酱知导航栏黑颜色
+
+#define kJiangzhiYellowColor [UIColor colorWithRed:255.0f/255.0f green:215.0f/255.0f blue:39.0f/255.0f alpha:1]//酱知主题颜色
+
+#define kTopicBtnTextNorColor [UIColor colorWithRed:35.0f/255.0f green:35.0f/255.0f blue:35.0f/255.0f alpha:1]//酱知主页话题按钮字体普通颜色
+
+#define kTopicBtnTextSelColor [UIColor colorWithRed:154.0f/255.0f green:154.0f/255.0f blue:154.0f/255.0f alpha:1]//酱知主页话题按钮字体选中颜色
+
+#define kTopicGrayLineColor [UIColor colorWithRed:180.0f/255.0f green:180.0f/255.0f blue:180.0f/255.0f alpha:1]//酱知主页话题灰线的颜色
+
+#define kScrollViewGrayBgColor [UIColor colorWithRed:235.0f/255.0f green:235.0f/255.0f blue:235.0f/255.0f alpha:1]//个人页面scrollView背景色（仿Tableview系统背景色）
+
+#define kPersonSegRedColor [UIColor colorWithRed:255.0f/255.0f green:187.0f/255.0f blue:40.0f/255.0f alpha:1]//酱知个人页面--segment红色
+
+#define kPersonSegTextgrayColor [UIColor colorWithRed:218.0f/255.0f green:151.0f/255.0f blue:22.0f/255.0f alpha:1]//酱知个人页面--segment未选中的字体颜色
+
+#define kSystemButtonBlueColor [UIColor colorWithRed:0.0f/255.0f green:122.f/255.0f blue:255.0f/255.0f alpha:1]//系统按钮的字体蓝色
+
+#define kTextViewBorderGray [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1]//文本输入框灰色
+
+#define kMeFollowLeftCircleColor [UIColor colorWithRed:57.0f/255.0f green:88.0f/255.0f blue:154.0f/255.0f alpha:1]//个人页面--我参与的--左侧圆圈蓝色
+
+#define kBlackAlphaColor [UIColor colorWithRed:45/255.0 green:45/255.0 blue:45/255.0 alpha:0.7]//black background  alpha color
+
+#define kUserInfomanBtnColor [UIColor colorWithRed:112.0/255 green:200.0f/255 blue:237.0f/255 alpha:1] //编辑个人资料--男性按钮选中颜色
+
+#define kUserInfowomenBtnColor [UIColor colorWithRed:254.0/255 green:110.0f/255 blue:109.0f/255 alpha:1] //编辑个人资料--女性按钮选中颜色
+
+#define kWhiteBack (0xffffff) //颜色一般性定义 -- 底色--白色
+
+#define kGrayBack (0xf9f9f9) //颜色一般性定义 -- 底色--灰色
+
+#define kYellowBack (0xffd727) //颜色一般性定义 -- 底色--黄色
+
+#define kBlackBack (0xffffff) //颜色一般性定义 -- 底色--黑色
+
+#define kBrownBack (0x403836) //颜色一般性定义 -- 底色--棕色
+
+#define kWhiteBack (0xffffff) //颜色一般性定义 -- 底色--白色
+
+#define kCellLineColor (0xE2E4E4) //底线的颜色
+
+
+
+
+//----------------------------------------------------------------------------
+//不同类型cell的复用标示
+//----------------------------------------------------------------------------
+#define kPicAndComIndentifier @"kPicAndComIndentifier"//主页-脑洞-图片带评论类的feed
+
+#define kPicOnlyIndentifier @"kPicOnlyIndentifier"//主页-脑洞-纯图片类的feed
+
+#define kTextAndComIndentifier @"kTextAndComIndentifier"//主页-脑洞-文本带评论类的feed
+
+#define kTextOnlyIndentifier @"kTextOnlyIndentifier"//主页-脑洞-纯文本类型的feed
+
+#define kVedioBrainHoleNoCom @"kVedioBrainHoleNoCom"//主页-脑洞-视频的feed(无评论)
+
+#define kVedioBrainHoleHasCom @"kVedioBrainHoleHasCom"//主页-脑洞-视频的feed(带评论)
+
+#define kCXNewQuestionIndentifier @"kCXNewQuestionIndentifier"//尝鲜-新问-纯文本类型的feed
+
+#define kPersonalTextOnly @"kPersonalTextOnly"//个人主页-我参与的-纯文本的feed
+
+#define kPersonalTextAndPic @"kPersonalTextAndPic"//个人主页-我参与的-文本带图片的feed
+
+#define kPersonalQuestion @"kPersonalQuestion"//个人主页-我参与的-问答类型的feed
+
+#define kPersonalAnswer @"kPersonalAnswer"//个人主页-我参与的-问答类型的feed
+
+#define kPersonalWords @"kPersonalWords"//个人主页-我关注的-词条列表的cell
+
+#define kPersonalNote @"kPersonalNote"//个人主页-列表的提示视图
+
+#define kPersonQATextIndentifier @"kPersonQATextIndentifier"//个人主页-答案详情-文本加图片类的feed
+
+#define kPersonQAPicIndentifier @"kPersonQAPicIndentifier"//个人主页-答案详情-文本类的feed
+
+#define kChangxianQuestionId @"kChangxianQuestionId"//主页-尝鲜-热答类的feed问题cell
+
+#define kChangxianQANoAnswerId @"kChangxianQANoAnswerId"//主页-尝鲜-热答类的feed无答案的cell
+
+#define kChangxianQAHasAnswerId @"kChangxianQAHasAnswerId"//主页-尝鲜-热答类的feed有答案的cell
+
+#define kChangxianQAVedioAnswerId @"kChangxianQAVedioAnswerId"//主页-尝鲜-热答类的feed视频答案的cell
+
+#define kChangxianRecommendId @"kChangxianRecommendId"//主页-尝鲜-关注--未登录时推荐用户的的cell
+
+#define kTopicQACellQuestionId @"kTopicQACellQuestionId"//尝鲜--词条--酱答--问题的cell
+
+#define kTopicQACellAnswerId @"kTopicQACellAnswerId"//尝鲜--词条--酱答--回答的cell
+
+#define kTopicQACellId @"kTopicQACellId"//尝鲜--词条--酱答的cell
+
+#define kFolCellAnswerId @"kFolCellAnswerId"//尝鲜--关注--回答的普通cell
+
+#define kFolCellQuestionId @"kFolCellQuestionId"//尝鲜--关注--问题的cell
+
+#define kQDetailQuestionCellId @"kQDetailQuestionCellId"//问题详情--问题的cell
+
+#define kQDetailAnswerCellId @"kQDetailAnswerCellId"//问题详情--回答的cell
+
+#define kMessageNopicCellId @"kMessageNopicCellId"//消息列表--无feed的cell
+
+#define kMessageHaspicCellId @"kMessageHaspicCellId"//消息列表--有图的cell
+
+#define kMessageHasTextCellId @"kMessageHasTextCellId"//消息列表--有文字的cell
+
+#define kMessagesystemCellId @"kMessagesystemCellId"//消息列表--系统消息的cell
+
+#define kFeedDetailNoPicCellId @"kFeedDetailNoPicCellId"//feed详情--无图片的cell
+
+#define kFeedDetailHasPicCellId @"kFeedDetailHasPicCellId"//feed详情--有图片的cell
+
+#define kFeedDetailCommentCellId @"kFeedDetailCommentCellId"//feed详情--评论的cell
+
+#define kAllSearchTopicCellId @"kAllSearchTopicCellId"//综合搜索--词条的cell
+
+#define kAllSearchUserCellId @"kAllSearchUserCellId"//综合搜索--酱友的cell
+
+#define kAllSearchFeedCellId @"kAllSearchFeedCellId"//综合搜索--问题的cell
+
+#define kUserlistCellId @"kUserlistCellId" //酱友列表--用户类别复用的cell标示
+
+#define kSearchTopiclistCellId @"kSearchTopiclistCellId" //词条搜索--词条列表的cell标示
+
+#define kHotTopicCellId    @"kHotTopicCellId"  // 酱厂--热门词条
+
+#define kTopicGroupingCellId @"kTopicGroupingCellId"  // 酱厂--词条分类
+
+#define kMyQuestionCellId    @"kMyQuestionCellId"  // 个人主页--我的提问
+
+#define kMyAnswerCellId    @"kMyAnswerCellId"  // 个人主页--我的回答
+
+#define kMyBrainHolePicCellId    @"kMyBrainHolePicCellId"  // 个人主页--我的脑洞（带图片的）
+
+#define kMyBrainHoleTextCellId    @"kMyBrainHoleTextCellId"  // 个人主页--我的脑洞（不带图片的）
+
+#define kTopicPicAndComment @"kTopicPicAndComment"//词条-脑洞-图片带评论类的feed
+
+#define kTopicPictureOnly @"kTopicPictureOnly"//词条-脑洞-纯图片类的feed
+
+#define kTopicTextAndComment @"kTopicTextAndComment"//词条-脑洞-文本带评论类的feed
+
+#define kTopicTextOnly @"kTopicTextOnly"//词条-脑洞-纯文本类型的feed
+
+#define kMessageCommentCell @"kMessageCommentCell"//消息系统-意见反馈的cell标识
+
+#define kUserTopicCellId @"kUserTopicCellId" //个人词条页面的cell标识
+
+#define kCellCommentLabelTag 8000 //CellCommentLabelTag
+
+
+
+//----------------------------------------------------------------------------
+//分享的shareToolBar的子视图item的类型
+//----------------------------------------------------------------------------
+#define kReportType @"kReportType" //举报的item
+
+#define kCopyType @"kCopyType" //复制的item
+
+#define kPictureType @"kPictureType" //保存图片的item
+
+#define kRemoveFeedType @"kRemoveFeedType" //删除feed的item
+
+#define KTopFeedType @"KTopFeedType" // feed 置顶
+
+#define KRecommendFeedType @"KRecommendFeedType" //feed 推荐
+
+#define KMergeFeedType @"KMergeFeedType"        //合并feed
+
+
+
+//----------------------------------------------------------------------------
+//七牛图片的参数
+//----------------------------------------------------------------------------
+#define kQiNiuPic_Screen_Width(picUrl) [NSString stringWithFormat:@"%@?imageView2/4/h/%d",picUrl,(int)kScreenScale*(int)kScreenWidth] //七牛图片裁剪按屏幕宽度
+
+#define kQiNiuPic_Crop_Activity(picUrl) [NSString stringWithFormat:@"%@?imageMogr2/crop/x",picUrl]// 裁剪活动 300
+
+#define kQiNiuPic_Crop_WordList(picUrl) [NSString stringWithFormat:@"%@?imageMogr2/gravity/North/crop/%dx",picUrl,((int)kScreenWidth - 24)*(int)kScreenScale]// 词条的图片 220
+
+#define kQiNiuPic_Crop_FeedGravity(picUrl) [NSString stringWithFormat:@"%@?imageMogr2/gravity/North",picUrl]//feed裁剪
+
+#define kQiNiuPic_WidthChange(picUrl) [NSString stringWithFormat:@"%@?/thumbnail/%d",picUrl,(int)kScreenScale*(int)kScreenWidth] //以百分比形式指定目标图片高度，宽度不变。取值范围0-1000。
+
+#define kQiNiuPic_Crop_Feed(picUrl) [NSString stringWithFormat:@"%@?imageMogr2/crop/%dx",picUrl,((int)kScreenWidth - 24)*(int)kScreenScale]// 裁剪feed 200
+
+#define kQiNiuPic_Grid_Feed(picUrl) [NSString stringWithFormat:@"%@?imageView2/0/w/",picUrl]// 缩放feed 150
+
+#define kQiNiuPic_Scale_backGround(picUrl) [NSString stringWithFormat:@"%@?imageView2/1/w/%d/h/%d",picUrl,(int)kScreenWidth,245]// 我--背景图片
+
+#define kQiNiuPic_Scale_UserL(picUrl) [NSString stringWithFormat:@"%@?imageView2/1/w/240/h/240",picUrl]// 我--大头像
+
+#define kQiNiuPic_Scale_UserM(picUrl) [NSString stringWithFormat:@"%@?imageView2/1/w/180/h/180",picUrl]// 我--中等头像
+
+#define kQiNiuPic_Scale_UserX(picUrl,size) [NSString stringWithFormat:@"%@?imageView2/1/w/%@/h/%@",picUrl,size,size]// 我--自定义尺寸的大头像
+
+#define kQiNiuPic_Message_Feed(picUrl) [NSString stringWithFormat:@"%@?imageView2/1/w/60/h/60",picUrl]// 消息feed图片
+
+#define kSHeadPicUrl  @"http://7xir6d.com2.z0.glb.qiniucdn.com/"   //用户头像的URL头
+
+#define kQiNiuPicType(picUrl) [NSString stringWithFormat:@"%@?imageInfo",picUrl]// 查询图片的类型
+
+#define kQiNiuWebpPicTure(picUrl) [NSString stringWithFormat:@"%@?imageMogr2/format/png",picUrl]// webp格式的图片转为png
+
+
+//----------------------------------------------------------------------------
+// application的信息
+//----------------------------------------------------------------------------
+#define kAppBundleName @"酱知" //个人主页-设置-关于我们-app名称
+
+#define kAppWebSite @"http://www.jiangzhi.la" //个人主页-设置-关于我们-app名称
+
+#define kAppContactQQGroup @"413286596" //个人主页-设置-关于我们-app名称
+
+#define kAppContactWechat @"酱知（jiangzhi_app）" //个人主页-设置-关于我们-app名称
+
+#define kAppContactWeibo @"@酱知" //个人主页-设置-关于我们-app名称
+
+#define kWeiboPublicUrl @"http://weibo.com/u/5565838436" //微博公众号链接
+
+#define kApplication_AppleId @"1004244118" //appleID
+
+
+//----------------------------------------------------------------------------
+// 第三方登陆等key , bugly 质量分析的key以及第三方分享平台key
+//----------------------------------------------------------------------------
+#define kSinaWeiboKey @"2633336075" //登陆-新浪微博登陆的key
+
+#define kSinaRedirectURI @"http://www.jiangzhi.la"  //新浪微博回调的url，微信分享回调的url,以及跳转链接
+
+#define kQQloginKey @"1103418498" //登陆-QQ登陆的key
+
+#define KUmengAppkey @"556eb66667e58e51c00037e5" //umeng key
+
+#define KWechatKey  @"wx776e21460cda5a2b" //微信AppId
+
+#define KWechatAppSecret @"02de1ec310c9e77d62ebd68f0db64472" //微信appSecret
+
+#define KShareURL @"www.jiangzhi.la"         //回调URl （微信）
+
+#define KQQAppId  @"1103991344" //@"1103991344"        //手机QQ 的AppId
+
+#define KQQAPPKEY @"sjNKIPh99BUaRL4M" //@"sjNKIPh99BUaRL4M"  //手机QQ 的Appkey
+
+#define k_XG_ACCESSID  2200136800      // 信鸽  ACCESS ID
+
+#define k_XG_ACCESSKEY @"IF2R49D9V7BL"     // 信鸽  ACCESS KEY
+
+#define k_XG_SECRETKEY @"5eef2e6e0c55b7c38a475117c2ea4ab8"     // 信鸽  SECRET KEY
+
+#define k_XG_TEST_ACCESSID  2200136886       // 信鸽 测试 ACCESS ID
+
+#define k_XG_TEST_ACCESSKEY @"I6BTGJ98W91D"     // 信鸽 测试 ACCESS KEY
+
+#define k_XG_TEST_SECRETKEY @"b546dc5111cf165d9707a1da1be3ad84"     // 信鸽 测试  SECRET KEY
+
+#define _IPHONE80_ 80000
+
+
+//----------------------------------------------------------------------------
+// 每日一蘸的网页上的点击请求截取的请求字符串
+//----------------------------------------------------------------------------
+#define kWebViewTopicClickStr @"jz://topic/" //点击词条banner的请求
+
+#define kWebViewUserClickStr @"jz://user/" //点击用户头像的请求
+
+#define kWebViewQuestionClickStr @"jz://feed/" //点击问题feed的请求
+
+#define kWebViewCloseClickStr @"jz://close"     //点击关闭的请求
+
+#define kWebViewUrlContainShareUrl @"shareUrl=" //每日一蘸网页url中包含分享的url 、 活动页面包含分享的url
+
+#define kWebViewUrlContainTopicNick @"topicName=" //每日一蘸网页url中包含词条名
+
+#define kActWebViewUrlContainShareMsg   @"shareMsg=" //活动页面包含分享的内容
+
+#define kActWebViewUrlContainShareImg  @"shareImg=" //活动页面包含分享的图片
+
+#define kWebViewUrlContainIsclose  @"?close=true" //关闭web界面 true 为删除当前视图，false 不删除
+
+
+
+//----------------------------------------------------------------------------
+// 注册页面的用户协议的url
+//----------------------------------------------------------------------------
+#define kUserRegisterProtocol @"http://7xir6d.com2.z0.glb.qiniucdn.com/agreement.html" //用户注册协议
+
+#define kTopicStandardUrl  @"http://7xir6d.com2.z0.glb.qiniucdn.com/rules.html" //词条规范说明Url
+
+#define kAccountCloseUrl  @"http://7xir6d.com2.z0.glb.qiniucdn.com/forbid.html" //封号的原因的Url
+
+#define kCommonQuestionUrl @"http://www.jiangzhi.la/wiki/help.html" //常见问题的Url
+
+#define kTopicRejectUrl(content) [NSString stringWithFormat:@"http://7xir6d.com2.z0.glb.qiniucdn.com/refuse_topic.html?message=%@",content] //词条申请被拒的系统消息跳转的页面
+
+#define kTopicRejectUrlOnly @"http://7xir6d.com2.z0.glb.qiniucdn.com/refuse_topic.html?message=" //词条申请被拒的系统消息跳转的页面
+
+#define KValidataTimer 60  //发送验证码的过期时间
+
+
+
+//----------------------------------------------------------------------------
+// gif图片的缓存的key
+//----------------------------------------------------------------------------
+#define kGifCacheKey(url) [NSString stringWithFormat:@"kGifCacheKey%@",url] //gif图片缓存使用的拼接key
+
+
+
+//----------------------------------------------------------------------------
+// 字典存储的key
+//----------------------------------------------------------------------------
+#define kJiangchangTopicListKey @"kJiangchangTopicListKey"   //酱厂的banner位的推荐词条列表的数组对应的key
+
+#define kJiangchangActivityListKey @"kJiangchangActivityListKey"   //酱厂的banner位的运营活动列表的数组对应的key
+

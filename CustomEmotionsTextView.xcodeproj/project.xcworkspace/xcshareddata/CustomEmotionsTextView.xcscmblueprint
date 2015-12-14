@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "42608f5e-1fa0-11e5-b2fe-4bd178413f20++44" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "42608f5e-1fa0-11e5-b2fe-4bd178413f20++44" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "58BEF880-18AE-4B58-9D0F-9CEDC681CC88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "42608f5e-1fa0-11e5-b2fe-4bd178413f20++44" : "CustomEmotionsTextView\/CustomEmotionsTextView\/Masonry\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CustomEmotionsTextView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CustomEmotionsTextView.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/192.168.1.216\/IOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "42608f5e-1fa0-11e5-b2fe-4bd178413f20++44"
+    }
+  ]
+}
